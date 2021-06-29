@@ -34,9 +34,11 @@ public class AddToCartServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             int productId = Integer.parseInt(request.getParameter("productId"));
+            
             ClientDal c = new ClientDal();
             int quantity = c.getQuantityProductInCartByProductId(user.getUserId(), productId);
             response.getWriter().println(user.getUserId());

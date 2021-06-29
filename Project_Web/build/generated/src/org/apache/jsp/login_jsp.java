@@ -53,7 +53,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <!-- Authen form -->\n");
-      out.write("        <form action=\"login\" method=\"post\">\n");
+      out.write("        <form action=\"LoginServlet\" method=\"post\">\n");
       out.write("            <div class=\"auth-form\">\n");
       out.write("                <div class=\"auth-form-container\">\n");
       out.write("                    <div class=\"auth-form-header\">\n");

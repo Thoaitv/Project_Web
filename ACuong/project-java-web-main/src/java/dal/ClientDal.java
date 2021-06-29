@@ -42,8 +42,7 @@ public class ClientDal {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Categories categories = new Categories(rs.getInt(9), rs.getString(10));
-                listP.add(new Product(
-                        rs.getInt(2),
+                listP.add(new Product(rs.getInt(2),
                         rs.getString(4),
                         rs.getFloat(5),
                         rs.getInt(6),
@@ -151,6 +150,14 @@ public class ClientDal {
                         rs.getString(6),
                         rs.getString(7),
                         categories);
+                
+//                private int productId;
+//    private String productName;
+//    private float price;
+//    private int quantity;
+//    private String productDescription;
+//    private String image;
+//    private Categories categories;
             }
         } catch (Exception e) {
         }
@@ -357,7 +364,18 @@ public class ClientDal {
     }
 
     public static void main(String[] args) {
-        ClientDal p = new ClientDal();
-        System.out.println(p.getAllProductSearchPagging(1, "vans"));
+//        ClientDal p = new ClientDal();
+//        System.out.println(p.getAllProductSearchPagging(1, "vans"));
+//        ClientDal dao = new ClientDal();
+//        Product product2 = dao.getProduct(3);
+//        System.out.println(product2.toString());
+        
+        ClientDal dao = new ClientDal();
+        List<Order> list = dao.getAllOrderByUserId(43);
+        for (Order cart : list) {
+            System.out.println(cart);
+        }
+
+
     }
 }

@@ -36,10 +36,12 @@ public class GoToMyOrderServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             ClientDal cd = new ClientDal();
             List<Order> listOrder = cd.getAllOrderByUserId(user.getUserId());
+            
             if (listOrder.isEmpty()) {
                 request.setAttribute("orderEmpty", "Order Empty!");
             }

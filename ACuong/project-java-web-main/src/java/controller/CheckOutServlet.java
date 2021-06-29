@@ -36,10 +36,12 @@ public class CheckOutServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("user");
             List<Cart> listCart = (List<Cart>) session.getAttribute("listCart");
             ClientDal cd = new ClientDal();
+
             for (Cart cart : listCart) {
                 int userId = cart.getUser().getUserId();
                 int productId = cart.getProduct().getProductId();

@@ -15,7 +15,7 @@
     </head>
     <body>
         <!-- Authen form -->
-        <form action="register" method="post">
+        <form action="RegisterServlet" method="post">
         <div class="auth-form">
             <div class="auth-form-container">
                 <div class="auth-form-header">
@@ -25,7 +25,7 @@
 
                 <div class="auth-form-form">
                     <div class="auth-form-group">
-                        <input class="auth-form-input" type="email" name="username"
+                        <input class="auth-form-input" type="text" name="username"
                                placeholder="Username" required="required" value="${param.username}"/>
                     </div>
 

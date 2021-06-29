@@ -68,8 +68,7 @@
                         <li class="
                             <c:if test="${requestScope.pageIndex == i}">
                                 active
-                            </c:if>
-                            ">
+                            </c:if>">
                             <c:if test="${requestScope.page == 1}">
                             <a href="home?pageIndex=${i}">${i}</a>
                             </c:if>

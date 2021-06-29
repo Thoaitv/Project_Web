@@ -33,6 +33,7 @@ public class User {
         this.role = role;
     }
 
+
     public int getUserId() {
         return userId;
     }
@@ -95,6 +96,11 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "userId=" + userId + ", userName=" + userName + ", password=" + password + ", fullName=" + fullName + ", phone=" + phone + ", address=" + address + ", gender=" + gender + ", role=" + role + '}';
     }
     
 }
