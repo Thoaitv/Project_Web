@@ -82,6 +82,11 @@
                                                                     Female
                                                                 </c:otherwise>
                                                             </c:choose>
+                                                                    
+                                                                    <c:if test = "${salary > 2000}">
+         <p>My salary is:  <c:out value = "${salary}"/><p>
+      </c:if>
+                                                                    
                                                         </td>
                                                         <td>${l.role}</td>
                                                         <td><label class="badge badge-warning" ><a href="UpdateAccountServlet?userId=${l.userId}">Update</a></label></td>
